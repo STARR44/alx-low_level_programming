@@ -1,1 +1,1 @@
-learning about variadic functions
+learning about variadic
