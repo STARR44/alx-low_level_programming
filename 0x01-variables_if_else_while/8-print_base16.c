@@ -1,22 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - A program that prints all the numbers of base 16
- * Return: Always 0
+ * main - Entry point
+ * Return: 0
  */
+
 int main(void)
 {
-	int num;
-	char ch;
+	int azeez = 0;
+	int bola = 'a';
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-
-	for (ch = 'a'; ch <= 'f'; ch++)
-		putchar(ch);
-
+	while (azeez <= 9)
+	{
+		putchar(azeez + '0');
+		azeez++;
+	}
+	while (bola <= 'f')
+	{
+		putchar(bola);
+		bola++;
+	}
 	putchar('\n');
-
 	return (0);
 }
-

@@ -6,29 +6,32 @@
  */
 int main(void)
 {
-	int x, y, z;
+	int b = 0;
+	int j;
+	int d;
 
-	for (x = 0; x < 8; x++)
+	while (b <= 7)
 	{
-		for (y = x + 1; y < 9; y++)
+		j = b + 1;
+	while (j <= 8)
+	{
+		d = j + 1;
+	while (d <= 9)
+	{
+		putchar(b + '0');
+		putchar(j + '0');
+		putchar(d + '0');
+		if (b < 7 || j < 8 || d < 9)
 		{
-			for (z = y + 1; z < 10; z++)
-			{
-				putchar((x % 10) + '0');
-				putchar((y % 10) + '0');
-				putchar((z % 10) + '0');
-
-				if (x == 7 && y == 8 && z == 9)
-					continue;
-
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(' ');
+			putchar(',');
 		}
+		d++;
+		}
+		j++;
 	}
-
+	b++;
+	}
 	putchar('\n');
-
 	return (0);
 }
-
