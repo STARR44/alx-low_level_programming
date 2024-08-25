@@ -1,1 +1,1 @@
-working on arguments counter and arguments vector
+0x0A. C - argc, argv project.

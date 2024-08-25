@@ -1,33 +1,35 @@
 #include "main.h"
-#include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - a function that sums up positive integers
- * @argc: argument counter
- * @argv: argument vector
- * Return: 0
+ * main - adds up all the arguments excluding non-digits
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: Alway 0
  */
-
 int main(int argc, char *argv[])
 {
-	int add = 0;
-	int i;
+	int u = 0;
+	int v = 0;
+	int sum = 0;
 
-	for (i = 1; i < argc; i++)
+	for (u = 1; u < argc; u++)
 	{
-		int num = atoi(argv[i]);
-
-		if (num > 0)
+		for (v = 0; argv[u][v]; v++)
 		{
-			add += num;
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[u][v]) == 0)
+			{
+				printf("Error\n");
+				return (0);
+			}
 		}
 	}
-	printf("%d\n", add);
+	for (u = 0; u < argc; u++)
+	{
+		sum += atoi(argv[u]);
+	}
+	printf("%d\n", sum);
 	return (0);
 }
