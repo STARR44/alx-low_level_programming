@@ -1,1 +1,1 @@
-creating a static library
+0x09. C - Static libraries
